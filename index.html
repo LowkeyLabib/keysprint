@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KeySprint</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>KeySprint</h1>
+<p class="subtitle">Type the words before time runs out.</p>
+
+<div class="time-select-row">
+<label>Select Time:</label>
+<select id="timeSelect">
+<option value="15">15s</option>
+<option value="30">30s</option>
+<option value="60" selected>1 minute</option>
+<option value="300">5 minutes</option>
+</select>
+</div>
+
+<div class="live-stats">
+
+<div class="live-time">
+<span class="live-label">Time Left</span>
+<span id="time">60</span>
+</div>
+
+<div class="live-wpm">
+<span class="live-label">WPM</span>
+<span id="wpm">0</span>
+</div>
+
+</div>
+
+<div class="words-wrapper">
+<div id="words" class="words-box"></div>
+</div>
+
+<input
+type="text"
+id="input"
+class="typing-input"
+placeholder="Start typing..."
+autocomplete="off"
+spellcheck="false"
+/>
+
+<div class="buttons">
+<button id="restartBtn">Restart</button>
+</div>
+
+</div>
+
+<div id="resultModal" class="modal hidden">
+
+<div class="modal-card">
+
+<h2>Test Complete</h2>
+
+<div class="result-stat">
+<span>WPM</span>
+<strong id="finalWpm">0</strong>
+</div>
+
+<div class="result-stat">
+<span>Accuracy</span>
+<strong id="finalAccuracy">100%</strong>
+</div>
+
+<button id="modalRestartBtn">Restart</button>
+
+</div>
+
+</div>
+
+<div class="watermark">Vibecoded by LowkeyLabib :)</div>
+
+<script src="words.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
